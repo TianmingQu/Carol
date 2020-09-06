@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Tianming Qu's research webpage </title>
+		<style>
+			h1 {
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<!--This section is the simple introduction for my research-->
+		<h1>This is a simple introduction about cryptic pocket</h1>
+		<p> The final aim of my project is to <b>predict druggable cryptic pockets</b> via molecular dynamic (MD) simulation. The following image shows an example of cryptic pocket identified via<a href="https://aip.scitation.org/doi/abs/10.1063/1.3216567"> Markov State Modeling (MSMs)</a> approach in 𝛃-lactamase.</p>
+		<img src="MSMs.png" />
+		</div>
+		<hr>
+		<!--This section is the introduction about cryptic pocket-->
+		<h1 style="color:red;">What is cryptic pocket?</h1>
+		<p>Cryptic pocket is one kind of ligand binding pocket whcih is  usually closed in the unbound state of the protein system and will be apparent due to the conformational(dynamic) change of the protein. As one would expect, the major challenge in computational prediction of druggable cryptic sites lies in that a) the cryptic site formation is likely a long timescale event beyond the reach of the existing MD simulation methods and b) biophysical nature of druggable cryptic site formation remains to be understood.</p>
+		<h1>Cryptic pocket sampling method</h1>
+		<p> Based on the formation mechamis of cryptic pocket,cryptic pocket pocket sampling method can be separated into two big catogires. One is the methods based on induced fit mechanism another is based on conformational selection mechnism:</p>
+		<ol>
+			<li>Induced fit mechanism: The formation of cryptic pockets requires the attendence of small probes whcih can induce the move of some residues or loops in order to open cryptic pocket.</li>
+			<li>Conformation selection mechanism: The formation of cryptic pocket is due to the conformation change of target protein in long timescales, which can happen without small probes.</li>
+		</ol>
+		<p>Methods based on induced fit mechanism:</p>
+		<ol>
+			<li><a href="https://pubs.acs.org/doi/abs/10.1021/jm801385d"><b>Mixed solvent molecular dynamic simulation</b></a>: Sampling method that applies small probes to sample the protein surface,with the hope that high concentration of small probes can accelerate the sampling ofcavities on protein surface.</li>
+		</ol>
+		<p>Methods based on conformational selection mechanism: for sampling enhancement, specialized techniques were applied only on ligand-free proteins to predictively explore protein conformational landscapes. Notably while some of the applied sampling techniques are general approaches, such as metadynamics and Markov State Modeling (MSM), there are also specific approaches that were deliberately customized based on existing sampling frameworks, such as Hamiltonian replica exchange:</p>
+		<ol>
+			<li><a href="https://www.pnas.org/content/99/20/12562.short"><b>Metadynamic simulation</b></a>: A generalized ensemble recursion method. It adaptively updates the energy function by continuously depositing Gaussian functions centered on the current state being visited along pre-selected CVs.In which case, the sampling among CV space can be ehhanced and thus accelerate the sampling ofcryptic pockets.</li>
+			<li><b>Markov State Models</b>: Through clustering simulation data sets into microstate bsaed on structural similarities and further lumping microstates into macrostates, the method can build a Markov model and a corresponding transition probability matrix in order to calculate the transition probablity among diffrent conformations. With this process, the cryptic pockets formation can be observed.</li>
+		</ol>
+		<p> Summery for cryptic sampling method:</p>
+		<div>
+		<table>
+			<tr>
+				<td>	</td>
+				<td><b>Induced-fit</b></td>
+				<td>	</td>
+				<td><b>Conformation selection</b></td>
+			</tr>
+			<tr>
+				<td><b>Method</b></td>
+				<td>Mixed MD</td>
+				<td>	</td>
+				<td>MetaD;MSMs</td>
+			</tr>
+		</table>	
+		<div/>
+	</body>
+</html> 
