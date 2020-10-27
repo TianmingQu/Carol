@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 import math
 print('Please enter the coordinate for point A  B and C: ')
