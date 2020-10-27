@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 print('Please input a temperature:')
 F = sys.stdin.readline()
