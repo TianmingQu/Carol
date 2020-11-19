@@ -29,12 +29,16 @@ e = []
 for i in range(2,376):
     a = dL[i+1] - dL[i]
     d.append(a)
-d.index(max(d)) #The biggest difference represents the beginning of the first peak dL[i] - dL[i-1]
-#Sorry, Dr.Stagg, I really don't know how to define the end of the last peak, so I just define it by visual inspection
+d.index(max(d))
+
+for i in range (520,879):
+    if dL[i] <= 0.01: # I define the limit of slope by myself
+        print(i)
+print(list.index(min(mi)))
 
 print('The first peak start at',t[361],'s','end at',t[386],'s')
 print('The second peak start at',t[386],'s end at',t[421],'s')
 print('The third peak start at',t[421],'s end at',t[516],'s')
-print('The fourth peak start at',t[516],'s end at 118.907s')
+print('The fourth peak start at',t[516],'s end at',t[571],'s')
 plt.plot(x, y)
 plt.show()
