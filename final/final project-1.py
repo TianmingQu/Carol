@@ -59,7 +59,7 @@ def readfile_calD(filename):
 def readfile_calDihedral(filename):
     f = open(filename, 'r')  # read in file
     lines = f.readlines()
-    atom1 = input('please enter the first atom number:')
+    atom1 = input('please enter the first atom number:') # The atom number for result plot is: D400(1234-1233-1238-1240) and F401(1234-1233-1246-1248)
     atom2 = input('please enter the second atom number:')
     atom3 = input('please enter the third atom number:')
     atom4 = input('please enter the fourth atom number:')
@@ -172,8 +172,8 @@ if __name__ == "__main__":
     f = open('final.html', 'w')
     openHTML(f, "final project")
     f.write("<h1>Analysis of Abl kinase conformation</h1>\n")
-    writeHTMLImage(f, "Distance change of specific atom ", 'Distance.png')
-    writeHTMLImage(f, "Dihedral Angel change of D400", 'D400.png')
-    writeHTMLImage(f, "Dihedral Angel change of F401", 'F401.png')
+    writeHTMLImage(f, "Distance change of specific atom：The distance between two residues shows a dramatic decrease after about 50ns, which indicates a conformational change of aC-helix, also the distance stays around 7Å for the rest of time, which shows a lifetime for the new conformation", 'Distance.png')
+    writeHTMLImage(f, "Dihedral Angel change of D400: The dihedral angel of D400 increases and keep fluctuating around 70 degree, with time increasing, which indicates a processing of DFG flip, the angel will further increase", 'D400.png')
+    writeHTMLImage(f, "Dihedral Angel change of F401: The dihedral angel of F401 shows no obvious change, which is consistent with the trajectory that for current stage there is no obvious conformational change for F401 residue", 'F401.png')
     closeHTML(f)
     f.close()
