@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # https://github.com/TianmingQu/Carol.git
+# The pdb file should only contain atom information
 import numpy as np
 from matplotlib import pyplot as plt
 from math import sqrt
